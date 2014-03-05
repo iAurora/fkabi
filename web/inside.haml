@@ -1,0 +1,129 @@
+!!! 5
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+%html{:lang => "ru"}
+	%head
+		%meta{:charset => "utf-8"}
+		%meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+		%meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+		%title Фрезениус Каби – Продукт
+		/[if lt IE 9]
+			%script{:src => '//html5shiv.googlecode.com/svn/trunk/html5.js'}
+		%script{:src => "js/jquery-1.11.0.min.js"}
+		%script{:src => "js/main.js"}
+		%link{:rel => "stylesheet", :href => "css/normalize.css"}
+		%link{:rel => "stylesheet", :href => "css/style.css"}
+		<!-- @reload -->
+	%body
+		#wrapper.clearfix
+			%header
+				%a.logo{:href => "//fresenius-kabi.ru/", :title => "На главную страницу"}
+				%form.site-search{:method => "get", :action => "//fresenius-kabi.ru/search"}
+					%input{:type => "search", :name => "search-field", :placeholder => "Поиск по сайту...", :autocomplete => "off"}>
+					%input{:type => "submit", :name => "submit-btn", :value => ""}
+				%nav
+					%ul
+						%li>
+							%a.l-style-01{:href => "#"}>Вход для врачей
+						%li>
+							%a.l-style-01{:href => "#"}>На вырост
+			%nav.main
+				%ul.dropdown
+					%li
+						%a.l-style-02{:href => "#"}О компании
+						%ul.sub-menu
+							%li 
+								%a.l-style-02{:href => "#"}Фрезениус Каби в мире
+							%li 
+								%a.l-style-02{:href => "#"}Фрезениус Каби в России и СНГ
+					%li 
+						%a.l-style-02{:href => "#"}Продукты
+						%ul.sub-menu
+							%li 
+								%a.l-style-02{:href => "#"}Инфузионная терапия
+							%li 
+								%a.l-style-02{:href => "#"}Парентеральное питание
+							%li 
+								%a.l-style-02{:href => "#"}Энтеральное питание
+							%li 
+								%a.l-style-02{:href => "#"}Внутривенная анестезия
+							%li 
+								%a.l-style-02{:href => "#"}Препараты для лечения ХПН
+					%li 
+						%a.l-style-02{:href => "#"}Где купить
+					%li 
+						%a.l-style-02{:href => "#"}Контакты
+			%nav.breadcrumbs
+				%ul
+					%li
+						%a.home-link.hide-text{:href => "#"}Главная страница
+					%li
+						%a.l-style-05{:href => "#"}Продукты
+					%li
+						%a.l-style-05{:href => "#"}Энтеральное питание
+					%li
+						%a.l-style-05{:href => "#"}Раннее энтеральное питание (глутамин)
+			%nav.vertical
+				%h1 Раннее энтеральное питание (глутамин)
+				%ul 
+					%li 
+						%a.l-style-06{:href => "#"}Инфузионная терапия
+					%li 
+						%a.l-style-06{:href => "#"}Парентеральное питание
+					%li 
+						%span.selected-item Энтеральное питание
+						%ul.level-2
+							%li
+								%a.l-style-07{:href => "#"}Зондовые смеси
+							%li
+								%a.l-style-07{:href => "#"}Раннее энтеральное питание (глутамин)
+							%li
+								%a.l-style-07{:href => "#"}Стандартное дополнительное питание
+							%li
+								%a.l-style-07{:href => "#"}Специальное дополнительное питание
+					%li 
+						%a.l-style-06{:href => "#"}Внутривенная анестезия
+					%li 
+						%a.l-style-06{:href => "#"}Препараты для лечения ХПН
+					%li 
+						%a.l-style-06{:href => "#"}Химиотерапевтические препараты
+					%li 
+						%a.l-style-06{:href => "#"}Одноразовые инфузионные помпы
+			%section.inside-content
+				%h1 Энтеральное питание
+				%nav.product-navigation
+					%ul
+						%li
+							%a.l-style-02{:href => "#"}Общая информация
+						%li
+							%a.l-style-02{:href => "#"}Инструкция
+						%li
+							%a.l-style-02{:href => "#"}Информация для врачей
+						%li
+							%a.l-style-02{:href => "#"}Где купить
+				%p Суточная доза и скорость инфузии зависят от кровопотери, поддержания или восстановления гемодинамики и от разведения крови (гемодилюции). В ситуациях, требующих быстрой компенсации гиповолемии и экстренного восполнения объема циркулирующей крови можно использовать 500 мл раствора в пластиковых контейнерах под давлением.
+				%p Максимальная суточная доза составляет 50 мл/кг массы тела в сутки. У детей в возрасте 10-18 лет суточная доза - 33 мл/кг у детей 2-10 лет суточная доза - 25 мл/кг, у новорожденных и детей до 2 лет суточная доза - 25 мл/кг.
+				%p Волювен можно вводить многократно в течение нескольких дней, в зависимости от потребностей больного. Длительность лечения зависит от продолжительности и тяжести гиповолемии, гемодинамической эффективности терапии и от гемодилюции.
+			%aside.right-meta
+				%ul
+					%li.social-print
+						%a.l-style-02{:href => "#"}Печать страницы
+					%li.social-mail
+						%a.l-style-02{:href => "#"}Отправить ссылку другу
+					%li.social-facebook
+						%a.l-style-02{:href => "#"}Поделиться в Facebook
+					%li.social-twitter
+						%a.l-style-02{:href => "#"}Поделиться в Twitter
+			%footer
+				%img{:src => "img/footer-stripes.png"}
+				%p 
+					Fresenius Kabi Russia / A company of the Fresenius Kabi Group 
+					%span &#124;
+				%ul
+					%li 
+						%a.l-style-02{:href => "#"}На главную
+					%li 
+						%a.l-style-02{:href => "#"}Карта сайта
+					%li 
+						%a.l-style-02{:href => "#"}Правовая информация

@@ -1,0 +1,69 @@
+form.site-search {
+  float: right;
+  margin-top: 7px;
+  width: 205px;
+  height: 25px;
+}
+
+.site-search input[name="search-field"] {
+	width: 171px;
+	height: 100%;
+  vertical-align: top;
+	padding: 0 7px;
+	outline: 0;
+	border: 1px solid #d1d6da;
+	font: 11px normal $body-font;
+	background: url('../img/search-input-grad.png') repeat-x;
+	-moz-appearance:    textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+
+}
+
+.site-search input[name="submit-btn"] {
+  width: 34px;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background: url('../img/search-btn.png') repeat-x;
+  &:hover {
+    background: url('../img/search-btn-hover.png') repeat-x;
+  }
+}
+
+
+
+
+
+
+input::-webkit-input-placeholder {
+   color: $lighter-text-color !important;
+}
+
+input:-moz-placeholder {
+    color: $lighter-text-color !important;
+}
+
+input::-moz-placeholder {
+    color: $lighter-text-color !important;
+}
+
+input:-ms-input-placeholder {
+    color: $lighter-text-color !important;
+}
+
+input:focus::-webkit-input-placeholder {
+   color: transparent !important;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent !important;
+}
+
+input:focus::-moz-placeholder {
+    color: transparent !important;
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent !important;
+}

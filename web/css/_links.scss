@@ -1,0 +1,55 @@
+.l-style-01 { // gray to red, no underline
+	color: $lighter-text-color;
+	text-decoration: none;
+	&:hover {
+		color: $accent-text-color;
+	}
+}
+
+.l-style-02 { // black to red, no underline
+	color: $main-text-color;
+	text-decoration: none;
+	&:hover {
+		color: $accent-text-color;
+	}
+}
+
+.l-style-03 { // gray to red, no underline + chevrons
+	@extend .l-style-01;
+	&:after {
+		content: "\00a0" url(../img/link-chevrons.png);
+	}
+}
+
+.l-style-04 { // gray to red, no underline + chevrons
+	@extend .l-style-02;
+	&:after {
+		content: "\00a0" url(../img/link-chevrons.png);
+	}
+}
+
+.l-style-05 { // blue breadcrumbs
+	color: $secondary-accent-text-color;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline; 
+	}
+}
+
+.l-style-06 { // regular black to bold red, no underline (vertical menu lvl1)
+	color: $main-text-color;
+	text-decoration: none;
+	&:hover {
+		font-weight: bold;
+		color: $accent-text-color;
+	}
+}
+
+.l-style-07 { // bold black to bold red, no underline (vertical menu lvl2)
+	color: $main-text-color;
+	text-decoration: none;
+	font-weight: bold;
+	&:hover {
+		color: $accent-text-color;
+	}
+}
