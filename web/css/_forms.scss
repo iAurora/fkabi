@@ -6,15 +6,15 @@ form.site-search {
 }
 
 .site-search input[name="search-field"] {
-	width: 171px;
-	height: 100%;
+  width: 171px;
+  height: 100%;
   vertical-align: top;
-	padding: 0 7px;
-	outline: 0;
-	border: 1px solid #d1d6da;
-	font: 11px normal $body-font;
-	background: url('../img/search-input-grad.png') repeat-x;
-	-moz-appearance:    textfield;
+  padding: 0 7px;
+  outline: 0;
+  border: 1px solid #d1d6da;
+  font: 11px normal $body-font;
+  background: url('../img/search-input-grad.png') repeat-x;
+  -moz-appearance:    textfield;
   -webkit-appearance: textfield;
   appearance: textfield;
 
