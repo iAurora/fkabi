@@ -15,17 +15,17 @@
 }
 
 .l-style-03 { // gray to red, no underline + chevrons
-  @extend .l-style-01;
   &:after {
     content: "\00a0" url(../img/link-chevrons.png);
   }
+  @extend .l-style-01;
 }
 
 .l-style-04 { // gray to red, no underline + chevrons
-  @extend .l-style-02;
   &:after {
     content: "\00a0" url(../img/link-chevrons.png);
   }
+  @extend .l-style-02;
 }
 
 .l-style-05 { // blue breadcrumbs
@@ -40,8 +40,8 @@
   color: $main-text-color;
   text-decoration: none;
   &:hover {
-    font-weight: bold;
     color: $accent-text-color;
+    font-weight: bold;
   }
 }
 
@@ -52,4 +52,37 @@
   &:hover {
     color: $accent-text-color;
   }
+}
+
+.l-style-08 { // content link, red underline to no underline
+  color: $accent-text-color; 
+  text-decoration: underline;
+  &:hover {
+    color: $accent-text-color;
+    text-decoration: none;
+  }
+}
+
+%filetype-link { // content link with file type icon
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 2px 0 2px 20px;
+  background-position: 0 .2em;
+  background-repeat: no-repeat;
+  color: #000;
+  text-decoration: none;
+  span.link {
+    @extend .l-style-08;
+  }
+}
+
+.l-style-pdf { // pdf link
+  @extend %filetype-link;
+  background-image: url('../img/file-pdf.gif');
+}
+
+.l-style-doc { // doc link
+  @extend %filetype-link;
+  background-image: url('../img/file-doc.gif');
 }

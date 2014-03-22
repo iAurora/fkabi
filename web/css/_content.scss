@@ -1,6 +1,215 @@
 .inside-content {
+  // Простое форматирование
+  .bold {
+    font-weight: bold;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+  .strike {
+    text-decoration: line-through;
+  }
+  .center {
+    text-align: center;
+  }
+  // Заголовки
   h1 {
-    font-size: 17px;
     color: $lighter-text-color;
+    font-size: 17px;
+  }
+  h2 {
+    font-size: 13px;
+  }
+  h3 {
+    color: $lighter-text-color;
+    font-size: 13px;
+  }
+  // Разделитель
+  hr {
+    margin: 10px auto;
+    height: 1px;
+    border: 0;
+    border-top: 1px dotted #000;
+  }
+  // Картинки
+  figure {
+    display: table;
+    margin: 0 auto;
+    width: 10px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    figcaption {
+      margin-top: 3px;
+      padding: 3px 10px 4px;
+      background: #fff;
+      text-align: right;
+      font-weight: bold;
+      font-size: 10px;
+    }
+    &.full {
+      margin: 14px auto;
+    }
+    &.left-50 {
+      float: left;
+      margin: 0 10px 5px 0;
+      img {
+        width: 210px;
+      }
+    }
+    &.right-50 {
+      float: right;
+      margin: 0 0px 5px 10px;
+      img {
+        width: 210px;
+      }
+    }
+    &.left-30 {
+      float: left;
+      margin: 0 10px 5px 0;
+      img {
+        width: 140px;
+      }
+    }
+    &.right-30 {
+      float: right;
+      margin: 0 0px 15px 10px;
+      img {
+        width: 140px;
+      }
+    }
+  }
+  // Схема проезда
+  .maps {
+    margin-top: 25px;
+    padding: 0 10px;
+    border-top: 1px dotted #000;
+    h2 {
+      padding: 0 0 7px 0;
+      text-align: center;
+    }
+    img { 
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box; 
+      box-sizing: border-box;
+      border: 1px solid #fff;
+    }
+    .left {
+      float: left;
+      margin-bottom: 15px;
+      width: 200px;
+    }
+    .right {
+      float: right;
+      margin-bottom: 15px;
+      width: 200px;
+    }
+  }
+  // Списки
+  ul.content-list {
+    margin: 14px 0 14px 18px;
+    padding: 0;
+    list-style: none;
+    li {
+      margin-bottom: 8px;
+      padding-left: 16px;
+      background-image: url('../img/list-bullet-lvl1.png');
+      background-position: 0 .5em;
+      background-repeat: no-repeat;
+      ul {
+        margin: 8px 0 0 18px;
+        padding: 0;
+        list-style: none;
+        li {
+        padding-left: 16px;
+        background-image: url('../img/list-bullet-lvl2.png');
+        }
+      }
+    }
+  }
+  // Таблицы
+  table {
+    margin: 20px 0 15px;
+    width: 100%;
+    caption {
+      padding-bottom: 10px;
+      color: $main-text-color;
+      text-align: center;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    th, td {
+      padding: 6px 11px;
+      border: 1px solid #c1cdd6;
+      text-align: center;
+      font-size: 10px;
+    }
+    th {
+      border: 1px solid #98a7b3;
+      background-color: #b8c5cf;
+    }
+    td {
+      
+    }
+    tr:hover {
+        background-color: #eff4f8;
+      }
+    .fit {
+      width: 1px;
+      white-space: nowrap;
+    }
+    .long {
+      text-align: left;
+    }
+  }
+  // Мелкий текст
+  p.footnote {
+    font-size: 10px;
+  }
+  // Аккордеон
+  .ui-accordion + .ui-accordion {
+      margin-bottom: 7px;
+    }
+  .ui-accordion .ui-accordion-header {
+    position: relative;
+    display: block;
+    margin-top: 7px;
+    padding: 0.75em 3.5em 0.75em 1em;
+    min-height: 0; /* support: IE7 */
+    width: 440px;
+    height: 42px;
+    background: url('../img/accordeon/toggle-down-bg.png');
+    color: $main-text-color;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+    font-weight: normal;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .ui-accordion .ui-accordion-content {
+    overflow: auto;
+    padding: 10 20px;
+    border-top: 0;
+    /* Legacy browsers */
+    background: #c8d4de url('../img/accordeon/gradient-bg.png') repeat-x top;
+    /* Recent browsers */
+    background: -webkit-gradient(linear, left top, left bottom, from(#c8d4de), to(#dfe8ef));
+    background: -webkit-linear-gradient(top, #c8d4de, #dfe8ef);
+    background: -moz-linear-gradient(top, #c8d4de, #dfe8ef);
+    background: -o-linear-gradient(top, #c8d4de, #dfe8ef);
+    background: linear-gradient(top, #c8d4de, #dfe8ef);
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    p {
+      margin: 0;
+    }
+  }
+  .ui-accordion .ui-accordion-header.ui-state-active {
+    background: url('../img/accordeon/toggle-up-bg.png');
   }
 }

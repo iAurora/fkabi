@@ -5,36 +5,32 @@ form.site-search {
   height: 25px;
 }
 
-.site-search input[name="search-field"] {
+.site-search input[type="search"] {
+  padding: 0 7px;
   width: 171px;
   height: 100%;
-  vertical-align: top;
-  padding: 0 7px;
   outline: 0;
   border: 1px solid #d1d6da;
-  font: 11px normal $body-font;
   background: url('../img/search-input-grad.png') repeat-x;
+  vertical-align: top;
+  font: 11px normal $body-font;
   -moz-appearance:    textfield;
   -webkit-appearance: textfield;
   appearance: textfield;
-
 }
 
-.site-search input[name="submit-btn"] {
+.site-search input[type="submit"] {
+  padding: 0;
   width: 34px;
   height: 100%;
   border: 0;
-  padding: 0;
   background: url('../img/search-btn.png') repeat-x;
   &:hover {
     background: url('../img/search-btn-hover.png') repeat-x;
   }
 }
 
-
-
-
-
+// Placeholder
 
 input::-webkit-input-placeholder {
    color: $lighter-text-color !important;
