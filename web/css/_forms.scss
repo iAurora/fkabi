@@ -32,6 +32,35 @@
 
 // Форма в контент-зоне
 
+%bevel-shadow {
+  -webkit-box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.08);
+}
+
+%emboss-shadow {
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+%input-style {
+  display: block;
+  font: 13px normal $body-font;
+  margin: 5px 0 10px;
+  padding: 7px;
+  width: 100%;
+  height: 30px;
+  outline: 0;
+  border: 1px solid #d1d6da;
+  background-color: #fff;
+  vertical-align: top;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
 .content-form {
   width: 75%;
   padding: 15px 20px;
@@ -46,24 +75,8 @@
   input[type="number"],
   input[type="search"],
   textarea {
-    display: block;
-    font: 13px normal $body-font;
-    padding: 0 7px;
-    margin: 5px 0 10px;
-    width: 100%;
-    height: 30px;
-    outline: 0;
-    border: 1px solid #d1d6da;
-    background-color: #fff;
-    vertical-align: top;
-    font: 13px normal $body-font;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
-    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
-    -webkit-transition: all 0.1s linear;
-    -moz-transition: all 0.1s linear;
-    -o-transition: all 0.1s linear;
-    transition: all 0.1s linear;
+    @extend %input-style;
+    @extend %emboss-shadow;
   }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -124,14 +137,116 @@
   }
 }
 
+// Контакт-форма
+.contact-form {
+  margin-top: 0;
+  width: 100%;
+  input[type="text"],
+  input[type="email"] {
+    width: $contact-width;
+  }
+  textarea {
+    height: auto;
+    padding-top: 6px;
+    resize: vertical;
+  }
+  select {
+    outline: 0;
+    border: 0 !important;
+    display: block;
+  }
+}
+
 // Placeholder
 
-input::-webkit-input-placeholder { color: $lighter-text-color !important; }
-input:-moz-placeholder { color: $lighter-text-color !important; }
-input::-moz-placeholder { color: $lighter-text-color !important; }
-input:-ms-input-placeholder { color: $lighter-text-color !important; }
+::-webkit-input-placeholder { color: $lighter-text-color !important; }
+:-moz-placeholder { color: $lighter-text-color !important; }
+::-moz-placeholder { color: $lighter-text-color !important; }
+:-ms-input-placeholder { color: $lighter-text-color !important; }
 
-input:focus::-webkit-input-placeholder { color: transparent !important; }
-input:focus:-moz-placeholder { color: transparent !important; }
-input:focus::-moz-placeholder { color: transparent !important; }
-input:focus:-ms-input-placeholder { color: transparent !important; }
+:focus::-webkit-input-placeholder { color: transparent !important; }
+:focus:-moz-placeholder { color: transparent !important; }
+:focus::-moz-placeholder { color: transparent !important; }
+:focus:-ms-input-placeholder { color: transparent !important; }
+
+// Dropdown
+
+.dropdown {
+  a {
+    color: #000; 
+    text-decoration: none;
+    &:hover {
+      color: #000;
+    }
+  }
+  .dropcontainer {
+    position: relative;
+    }
+  .trigger {
+    @extend %input-style;
+    @extend %bevel-shadow;
+    padding-right: 20px;
+    width: $contact-width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: #fff url(../images/select-arrow-open.png) 96% center no-repeat;
+  }
+  .trigger:hover {
+    color: $secondary-accent-text-color;
+    background: $dropdown-bg-color url(../images/select-arrow-open.png) 96% center no-repeat;
+  }
+  .activetrigger {
+    @extend %input-style;
+    padding-right: 20px;
+    width: $contact-width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: $dropdown-bg-color url(../images/select-arrow-close.png) 96% center no-repeat;
+  }
+  .activetrigger:hover {
+    background: $dropdown-bg-color url(../images/select-arrow-close.png) 96% center no-repeat;
+    color: $secondary-accent-text-color;
+  }
+  .activetrigger:active {
+    background: $dropdown-bg-color url(../images/select-arrow-close.png) 96% center no-repeat;
+    color: $secondary-accent-text-color;
+  }
+  .dropcontainer ul {
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #fff;
+    list-style-type: none;
+    padding: 10px;
+    margin: -10px 0 0 0;
+    width: $contact-width;
+    z-index: 100;
+  }
+  .dropcontainer ul li {
+    padding: 5px;
+    a {
+      display: block;
+      &:hover {
+        color: $secondary-accent-text-color;
+      }
+    }
+  }
+  .dropcontainer ul li:hover {
+    background: $dropdown-bg-color;
+    color: $secondary-accent-text-color;
+    outline: none;
+  }
+  .dropcontainer ul li:first-child {
+    display: none;
+  }
+  .dropcontainer ul li:last-child {
+    border-bottom: none;
+  }
+  .dropdownhidden {
+    display: none;
+  }
+  .dropdownvisible {
+    height: auto;
+  }
+}
