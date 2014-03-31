@@ -5,6 +5,7 @@
 @import "menu";
 @import "lightbox";
 @import "content";
+@import "search";
 
 html {
   color: $main-text-color;
@@ -124,11 +125,11 @@ header nav {
 .product-navigation {
   margin-top: 18px;
   margin-bottom: 20px;
-  padding: 4px 0 7px;
+  padding: 5px 0 7px;
   // min-height: 42px;
   border-top: 1px dotted #000;
   border-bottom: 1px dotted #000;
-  font-size: 9px;
+  font-size: 11px;
   ul {
     margin: 0;
     padding: 0;
