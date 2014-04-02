@@ -54,7 +54,7 @@ header nav {
 }
 
 .breadcrumbs {
-  margin: 1px 0 30px;
+  margin: 1px 0 0;
   width: 100%;
   height: 33px;
   border: 1px solid $lighter-border-color;
@@ -90,7 +90,7 @@ header nav {
 
 .vertical {
   float: left;
-  margin: 0 0 45px 10px;
+  margin: 30px 0 45px 10px;
   width: 194px;
   h1 {
     margin-bottom: 5px;
@@ -185,10 +185,11 @@ header nav {
 
 .home-content {
   overflow: hidden;
-  margin: 50px 15px 45px 0;
+  margin: 50px 15px 30px 0;
   width: 635px;
   color: $lighter-text-color;
-  margin-botton: 45px;
+  margin-bottom: 45px;
+  margin-top: 30px;
   h1 {
     font-size: 20px;
   }
@@ -218,18 +219,25 @@ header nav {
   }
 }
 
-.inside-content {
+.inside-content,
+.search-content {
   float: left;
-  margin: 0 29px 45px;
+  margin: 30px 29px 30px;
   padding: 4px 32px 17px;
   width: 504px;
   background-color: $content-bg-color;
 }
+.search-content {
+  padding-bottom: 28px;
+}
+
+
 
 .right-meta {
   float: left;
   padding-left: 3px;
   width: 204px;
+  margin-top: 30px;
   ul {
     margin: 0;
     padding: 7px 0 10px 0;

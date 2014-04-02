@@ -1,0 +1,215 @@
+.search-filter {
+  float: left;
+  margin: 30px 0 45px 0px;
+  padding: 0 20px 20px;
+  width: 204px;
+  background-color: $content-bg-color;
+  font-size: 12px;
+  h1 {
+    padding-top: 6px;
+    color: $lighter-text-color;
+    font-size: 15px;
+  }
+  h2 {
+    margin-bottom: 3px;
+    font-size: 12px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .filters li {
+    line-height: 1.5;
+  }
+  .suggestions li {
+    padding-bottom: 3px;
+    padding-left: 11px;
+    background-image: url('../img/link-chevrons.png');
+    background-position: 0 .5em;
+    background-repeat: no-repeat;
+    font-size: 11px;
+    line-height: 1.2;
+  }
+}
+
+.search-content {
+  padding-bottom: 30px;
+  h1 {
+    color: $lighter-text-color;
+    font-size: 17px;
+  }
+  h2 {
+    font-size: 13px;
+  }
+  h3 {
+    color: $lighter-text-color;
+    font-size: 13px;
+  }
+  .number-found {
+    padding-bottom: 3px;
+    font-size: 11px;
+    span {
+      font-weight: bold;
+    }
+  }
+  article {
+    padding: 5px 0 20px 15px;
+    border-bottom: 1px solid $solid-lines-color;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    h1 {
+      margin-bottom: 0;
+      margin-left: -25px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .category {
+      font-style: italic;
+      font-size: 11px;
+    }
+    .linktype {
+      font-size: 11px;
+      .pipe {
+        color: darken($solid-lines-color,10%);
+      }
+    }
+    p {
+      margin: 3px 0;
+      font-size: 12px;
+      em {
+        padding: 0 5px;
+        background: lighten($secondary-accent-text-color,42%);
+        font-style: normal;
+      }
+    }
+  }
+  .last-result {
+    border-bottom: 0;
+  }
+}
+
+.advanced-search {
+  margin: 25px 0 30px;
+  input[type="search"] {
+    @extend %input-style;
+    @extend %emboss-shadow;
+    display: inline-block;
+    margin: 0;
+    width: 345px;
+    &:focus {
+      @extend %focus-style;
+    }
+  }
+  .form-submit-btn {
+    margin-left: 8px;
+    padding: 0;
+    width: 85px;
+    height: 29px;
+    border: 0;
+    background: $lighter-text-color;
+    color: #fff;
+    cursor:pointer;
+    &:hover {
+      background-color: lighten($secondary-accent-text-color, 10%);
+    }
+    &:active {
+      margin-top: 3px;
+      background-color: lighten($secondary-accent-text-color, 20%);
+    }
+  }
+  .precision {
+    margin-top: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    h2 {
+      display: inline-block;
+      float: left;
+      margin: 2px 7px 0 6px;
+      font-size: 10px;
+    }
+    ul {
+      float: left;
+      margin: 0px 0 0 0;
+      padding: 0;
+      list-style: none;
+      li {
+        display: inline-block;
+        margin-left: 7px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.pagination-top,
+.pagination-bottom {
+  height: 40px;
+  border-top: 1px dotted $dotted-lines-color;
+  border-bottom: 1px dotted $dotted-lines-color;
+  color: $lighter-text-color;
+  font-size: 12px;
+  ul {
+    display: inline-block;
+    float: left;
+    margin: 12px 0 0 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      &:before {
+        content: "|";
+      }
+      span {
+        color: $accent-text-color;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+    }
+    li:first-child:before {
+        color: $content-bg-color;
+      }
+  }
+  .first-number:before {
+    color: $content-bg-color;
+  }
+  .prev, .next {
+    display: inline-block;
+    margin-top: 12px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+  .next {
+    float: left;
+    margin-left: 10px;
+    background: url('../img/pagination-arrow-right.png');
+    &:hover {
+      background: url('../img/pagination-arrow-right-hover.png');
+    }
+  }
+  .prev {
+    float: left;
+    background: url('../img/pagination-arrow-left.png');
+    &:hover {
+      background: url('../img/pagination-arrow-left-hover.png');
+    }
+    &.none { // класс для скрытия prev и next
+      display: none;
+    }
+  }
+  .sort {
+    float: right;
+    margin-top: 10px;
+    select {
+      outline: 0;
+    }
+    label {
+      padding: 0 3px 0 0;
+      color: $main-text-color;
+      font-weight: bold;
+      font-size: 9px;
+    }
+  }
+}

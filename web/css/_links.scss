@@ -21,7 +21,7 @@
   @extend .l-style-01;
 }
 
-.l-style-04 { // gray to red, no underline + chevrons
+.l-style-04 { // black to red, no underline + chevrons
   &:after {
     content: "\00a0" url(../img/link-chevrons.png);
   }
@@ -63,6 +63,25 @@
   }
 }
 
+.l-style-09 { // red no underline to red underline
+  color: $accent-text-color; 
+  text-decoration: none;
+  &:hover {
+    color: $accent-text-color;
+    text-decoration: underline;
+  }
+}
+
+.l-style-10 { // gray to red, no underline + chevrons
+  &:before {
+    content: "\00a0" url(../img/link-chevrons.png);
+    padding-right: 3px;
+  }
+  @extend .l-style-02;
+}
+
+// Сссылки с иконками по типу документа
+
 %filetype-link { // content link with file type icon
   display: block;
   margin-top: 6px;
@@ -85,4 +104,86 @@
 .l-style-doc { // doc link
   @extend %filetype-link;
   background-image: url('../img/file-doc.gif');
+}
+
+.l-style-xcl { // excel link
+  @extend %filetype-link;
+  background-image: url('../img/file-xcl.png');
+}
+
+.l-style-generic { // generic link
+  @extend %filetype-link;
+  background-image: url('../img/file-generic.png');
+}
+
+.l-style-media { // media link
+  @extend %filetype-link;
+  background-image: url('../img/file-media.png');
+}
+
+.l-style-page { // page link
+  @extend %filetype-link;
+  background-image: url('../img/file-page.png');
+}
+
+// Ссылки поисковой выдачи
+
+// Заголовочные
+
+%filetype-link-s { // content link with file type icon
+  display: block;
+  margin: 0;
+  padding: 2px 0 2px 25px;
+  background-position: 0 .2em;
+  background-repeat: no-repeat;
+  @extend .l-style-08;
+}
+
+.l-style-s-pdf { // pdf link
+  @extend %filetype-link-s;
+  background-image: url('../img/file-pdf.gif');
+}
+
+.l-style-s-doc { // doc link
+  @extend %filetype-link-s;
+  background-image: url('../img/file-doc.gif');
+}
+
+.l-style-s-xcl { // excel link
+  @extend %filetype-link-s;
+  background-image: url('../img/file-xcl.png');
+}
+
+.l-style-s-generic { // generic file link
+  @extend %filetype-link-s;
+  background-image: url('../img/file-generic.png');
+}
+
+.l-style-s-media { // media link
+  @extend %filetype-link-s;
+  background-image: url('../img/file-media.png');
+}
+
+.l-style-s-page { // page link
+  @extend %filetype-link-s;
+  background-image: url('../img/file-page.png');
+}
+
+// Ссылка и загрузка
+
+%linktype {
+  padding: 2px 0 2px 15px;
+  background-position: 0 .4em;
+  background-repeat: no-repeat;
+  @extend .l-style-09;
+}
+
+.l-style-s-download { // download link
+  @extend %linktype;
+  background-image: url('../img/file-download.png');
+}
+
+.l-style-s-link { // web link
+  @extend %linktype;
+  background-image: url('../img/file-link.png');
 }

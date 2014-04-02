@@ -7,6 +7,9 @@ $.webshims.setOptions("forms", {
 
 $.webshims.polyfill('forms canvas');
 
+// Add class .last-result to the last result of search results page
+$(function(){$("section.search-content article").last().addClass("last-result")});
+
 // Toggle accordeon
 $(function(){$(".a-toggle").accordion({collapsible:true,active:false,heightStyle:"content"})});
 
