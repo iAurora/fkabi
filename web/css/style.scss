@@ -294,4 +294,91 @@ footer {
   }
 }
 
+// PRINT
 
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  a.logo:after {
+    content: url("../img/logo.png");
+  }
+
+  .site-search,
+  header nav,
+  footer,
+  nav.main,
+  .vertical,
+  .right-meta {
+    display: none;
+  }
+  .breadcrumbs {
+    margin-top: 10px;
+    border: none;
+  }
+  .home-content,
+  .inside-content,
+  .search-content {
+    width: 100%;
+    margin: 0;
+    padding: 20px 70px;
+    background: none;
+    font-size: 16px;
+    h1 {
+    color: darken($lighter-text-color,5%);
+    font-size: 21px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    h3 {
+      color: darken($lighter-text-color,5%);
+      font-size: 16px;
+    }
+    h1, h2, h3 {
+      page-break-after: avoid;
+    }
+    ul, img {
+      page-break-inside: avoid;
+    }
+    .product-navigation {
+      font-size: 13px;
+    }
+    table {
+      margin: 20px 0 15px;
+      width: 100%;
+      caption {
+        font-size: 16px;
+      }
+      th, td {
+        font-size: 13px;
+      }
+    }
+    p.footnote {
+      font-size: 13px;
+    }
+    .ui-accordion .ui-accordion-header {
+      width: 100%;
+      border: 1px solid $lighter-border-color;
+      background: #fff url(../images/select-arrow-open.png) 96% center no-repeat;
+      text-shadow: none;
+    }
+    .ui-accordion .ui-accordion-content {
+      background: none;
+      border: 1px solid $lighter-border-color;
+      border-top: none;
+    }
+    .ui-accordion .ui-accordion-header.ui-state-active {
+      background: #fff url(../images/select-arrow-close.png) 96% center no-repeat;
+    }
+    &:after {
+      content: "www.fresenius-kabi.ru \A Представительство «Фрезениус Каби Дойчланд ГмбХ» \A 125167 Москва, Ленинградский проспект, д. 37, корпус 9. \A Тел.: (495) 988-45-78, Факс: (495) 988-45-79  \A E-mail: freka@fresenius-kabi.ru, Е-mail для вакансий: vacancies@fresenius-kabi.ru";
+      display: block;  
+      white-space: pre-wrap;
+      font-size: 11px;
+      padding-top: 30px;
+    }
+  }
+}
