@@ -110,8 +110,8 @@
     }
   }
   // Списки
-  ul.content-list {
-    margin: 14px 0 14px 18px;
+  ul {
+    margin: 14px 0 14px 0px;
     padding: 0;
     list-style: none;
     li {
@@ -121,7 +121,7 @@
       background-position: 0 .5em;
       background-repeat: no-repeat;
       ul {
-        margin: 8px 0 0 18px;
+        margin: 8px 0 0 15px;
         padding: 0;
         list-style: none;
         li {
@@ -152,17 +152,10 @@
       border: 1px solid #98a7b3;
       background-color: #b8c5cf;
     }
-    td {
-      
-    }
     tr:hover {
         background-color: #eff4f8;
       }
-    .fit {
-      width: 1px;
-      white-space: nowrap;
-    }
-    .long {
+    .text {
       text-align: left;
     }
   }
