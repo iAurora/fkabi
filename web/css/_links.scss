@@ -10,7 +10,7 @@
   color: $main-text-color;
   text-decoration: none;
   &:hover {
-    color: $accent-text-color;
+    color: $accent-text-color !important;
   }
 }
 
